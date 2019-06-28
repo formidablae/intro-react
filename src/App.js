@@ -1,20 +1,21 @@
 import React from "react";
-import List from "./List";
 import Table from "./Table";
+/*Add import statement here for step 2*/
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       buttonClicked: "",
-      assignments: [],
-      students: [],
+      assignments: [] /*Below this line, add the students state variable for step 3*/,
       grades: {}
     };
 
     this.handleButtonClicked = this.handleButtonClicked.bind(this);
     this.addAssignment = this.addAssignment.bind(this);
-    this.addStudent = this.addStudent.bind(this);
+    /*Uncomment the line below for step 4*/
+    /*this.addStudent = this.addStudent.bind(this);*/
     this.addGrade = this.addGrade.bind(this);
   }
 
@@ -30,11 +31,7 @@ class App extends React.Component {
     });
   }
 
-  addStudent(studentName) {
-    this.setState({
-      students: this.state.students.concat(studentName)
-    });
-  }
+  /*Write an addStudent function here for step 4*/
 
   addGrade(assignment, student, score) {
     let grades = this.state.grades;
@@ -50,7 +47,8 @@ class App extends React.Component {
   render() {
     let tabChoice = <div />;
 
-    if (this.state.buttonClicked === "assignments") {
+    /*Uncomment below for step 2*/
+    /*if (this.state.buttonClicked === "assignments") {
       tabChoice = (
         <List
           placeholder="Add Assignment..."
@@ -59,20 +57,23 @@ class App extends React.Component {
           title="Assignments"
         />
       );
-    }
+    }*/
 
-    if (this.state.buttonClicked === "students") {
+    /* Change below for step 4*/
+
+    /*if (this.state.buttonClicked === "students") {
       tabChoice = (
         <List
-          placeholder="Add Student..."
-          currList={this.state.students}
-          addFunction={this.addStudent}
+          placeholder="Add Assignment..." 
+          currList={this.state.assignments}
+          addFunction={this.addAssignment}
           title="Student Roster"
         />
       );
-    }
+    }*/
 
-    if (this.state.buttonClicked === "grades") {
+    /* Uncomment lines below for step 3*/
+    /*if (this.state.buttonClicked === "grades") {
       tabChoice = (
         <Table
           tableNames={this.state.assignments}
@@ -81,17 +82,22 @@ class App extends React.Component {
           data={this.state.grades}
         />
       );
-    }
+    }*/
 
     return (
       <div>
+        <div className="Box Box--spacious f4">
+          <div className="Box-header">
+            {/* Replace this line with the proper header code for Step 1 */}
+          </div>
+        </div>
         <nav className="UnderlineNav d-flex flex-justify-center">
-          <div className="UnderlineNav-body">
+          <div className="UnderlineNav-body pt-6">
             <button
               className="btn btn-primary"
               onClick={() => this.handleButtonClicked("assignments")}
             >
-              Assignments
+              Aignments
             </button>
             <button
               className="btn btn-primary"
