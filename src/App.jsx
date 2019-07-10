@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "./Table";
+/*Add import statement here for step 2*/
 
 class App extends React.Component {
   constructor(props) {
@@ -7,12 +8,14 @@ class App extends React.Component {
 
     this.state = {
       buttonClicked: "",
-      assignments: [],
+      assignments: [] /*Below this line, add the students state variable for step 3*/,
       grades: {}
     };
 
     this.handleButtonClicked = this.handleButtonClicked.bind(this);
     this.addAssignment = this.addAssignment.bind(this);
+    /*Uncomment the line below for step 4*/
+    /*this.addStudent = this.addStudent.bind(this);*/
     this.addGrade = this.addGrade.bind(this);
   }
 
@@ -28,6 +31,8 @@ class App extends React.Component {
     });
   }
 
+  /*Write an addStudent function here for step 4*/
+
   addGrade(assignment, student, score) {
     let grades = this.state.grades;
     let assignmentName = assignment;
@@ -42,10 +47,48 @@ class App extends React.Component {
   render() {
     let tabChoice = <div />;
 
+    /*Uncomment below for step 2*/
+    /*if (this.state.buttonClicked === "assignments") {
+      tabChoice = (
+        <List
+          placeholder="Add Assignment..."
+          currList={this.state.assignments}
+          addFunction={this.addAssignment}
+          title="Assignments"
+        />
+      );
+    }*/
+
+    /* Change below for step 4*/
+
+    /*if (this.state.buttonClicked === "students") {
+      tabChoice = (
+        <List
+          placeholder="Add Assignment..." 
+          currList={this.state.assignments}
+          addFunction={this.addAssignment}
+          title="Student Roster"
+        />
+      );
+    }*/
+
+    /* Uncomment lines below for step 3*/
+    /*if (this.state.buttonClicked === "grades") {
+      tabChoice = (
+        <Table
+          tableNames={this.state.assignments}
+          rows={this.state.students}
+          addFunction={this.addGrade}
+          data={this.state.grades}
+        />
+      );
+    }*/
+
     return (
       <div>
         <div className="Box Box--spacious f4">
           <div className="Box-header">
+            {/* Replace this line with the proper header code for Step 1 */}
           </div>
         </div>
         <nav className="UnderlineNav d-flex flex-justify-center">
