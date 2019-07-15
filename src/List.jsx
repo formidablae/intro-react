@@ -27,8 +27,8 @@ class List extends React.Component {
   render() {
     return (
       <div className="col-6 mx-auto">
-        <p className="h2">REPLACE THIS TITLE WITH A PROP</p>{" "}
-        {/*Replace the code above to call the title prop for step 2*/}
+        {/*Replace the code below to call the title prop for step 2*/}
+        <p className="h2">REPLACE THIS TITLE WITH A PROP</p>
         <form onSubmit={this.handleSubmit}>
           <label>
             <input
