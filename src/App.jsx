@@ -54,7 +54,7 @@ class App extends React.Component {
               className="btn btn-primary"
               onClick={() => this.handleButtonClicked("assignments")}
             >
-              Aignments
+              Assignments
             </button>
             <button
               className="btn btn-primary"
