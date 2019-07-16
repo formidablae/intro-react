@@ -18,7 +18,7 @@ React has growing popularity in the tech industry because of its simplicity. Wit
 
 ### What we will be building
 
-So what are we going to be building today? We are going to build a gradebook for teachers! Take a look at `deployed link here`. Here's what the finished app looks like.
+So what are we going to be building today? We are going to build a gradebook for teachers! Take a look at [our solution](https://githubtraining.github.io/react-solution/). Here's what the finished app looks like.
 
 You will be able to add assignments
 ![Finished Assignments](https://user-images.githubusercontent.com/25253905/61293228-11f26580-a788-11e9-90ac-9612c2bddf6b.png)
