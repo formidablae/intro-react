@@ -1,1 +1,1 @@
-This is the repository you will be working in! Check out your first issue!
+This is your template repository!
