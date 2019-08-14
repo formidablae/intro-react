@@ -8,13 +8,13 @@ class App extends React.Component {
 
     this.state = {
       buttonClicked: "",
-      assignments: [] /*Below this line, add the students state variable for step 3*/,
+      assignments: [] /*Below this line, add the students state variable*/,
       grades: {}
     };
 
     this.handleButtonClicked = this.handleButtonClicked.bind(this);
     this.addAssignment = this.addAssignment.bind(this);
-    /*Uncomment the line below for step 3*/
+    /*Uncomment the line below to bind the method*/
     /*this.addStudent = this.addStudent.bind(this);*/
     this.addGrade = this.addGrade.bind(this);
   }
@@ -25,14 +25,14 @@ class App extends React.Component {
     });
   }
 
-  /*Check out this addAssignment function for step 3*/
+  /*Check out this addAssignment method*/
   addAssignment(assignmentName) {
     this.setState({
       assignments: this.state.assignments.concat(assignmentName)
     });
   }
 
-  /*Write an addStudent function here for step 3*/
+  /*Write an addStudent method here*/
 
   addGrade(assignment, student, score) {
     let grades = this.state.grades;
@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     let tabChoice = <div />;
 
-    /*Uncomment below for step 2*/
+    /*Uncomment below to render assignments*/
     /*if (this.state.buttonClicked === "assignments") {
       tabChoice = (
         <List
@@ -60,7 +60,7 @@ class App extends React.Component {
       );
     }*/
 
-    /* Change below for step 4*/
+    /* Change below to render students*/
 
     /*if (this.state.buttonClicked === "students") {
       tabChoice = (
@@ -73,7 +73,7 @@ class App extends React.Component {
       );
     }*/
 
-    /* Uncomment lines below for step 3*/
+    /* Uncomment lines below to render grades*/
     /*if (this.state.buttonClicked === "grades") {
       tabChoice = (
         <Table
@@ -89,7 +89,7 @@ class App extends React.Component {
       <div>
         <div className="Box Box--spacious f4">
           <div className="Box-header">
-            {/* Replace this line with the proper header code for Step 1 */}
+            {/* Replace this line with the proper header code*/}
           </div>
         </div>
         <nav className="UnderlineNav d-flex flex-justify-center">
