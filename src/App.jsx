@@ -1,6 +1,6 @@
 import React from "react";
 import Table from "./Table";
-/*Add import statement here for step 2*/
+/*Add import statement here*/
 
 class App extends React.Component {
   constructor(props) {
